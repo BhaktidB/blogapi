@@ -1,7 +1,9 @@
 const express = require('express')
 require('./config/dbConfig')
-const port = 3000
 const app=express();
+const dotenv=require('dotenv');
+dotenv.config()
+const port = process.env.PORT || 3000
 const Post=require('./model/Post')
 
 app.use(express.json())
